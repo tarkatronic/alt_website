@@ -1,4 +1,4 @@
-alt_website
+Active Lifestyle Therapy&trade; website
 ===========
 
-Active Lifestyle Therapy website
+This is a basic content website built on lyrical_page.
