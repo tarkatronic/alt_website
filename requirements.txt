@@ -1,0 +1,4 @@
+Django>=1.5,<1.6
+lyrical_page==2.0.0p3
+django-grappelli==2.4.4
+South==0.7.6
