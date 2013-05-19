@@ -5,11 +5,23 @@
         <meta charset="utf8"/>
         <meta property="og:site_name" content="Active Lifestyle Therapy"/>
         <link href="http://fonts.googleapis.com/css?family=Comfortaa:400,300" rel="stylesheet" type="text/css">
-        <link href="../static/css/main.css" rel="stylesheet" type="text/css">
+        <link href="{{ STATIC_URL }}css/main.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
         <div id="BodyContainer">
-            <div id="Header"></div>
+            <div id="Header">
+                <div id="Logo">
+                    <h1>Active Lifestyle Therapy</h1>
+                </div>
+            </div>
             <div id="TopNav" class="clearfix">
                 <ul>
                     <li><a href="/">Home</a></li>
@@ -29,9 +41,11 @@
             <div id="HomeRow1">
                 <div id="YogaHike" class="clearfix">
                     <h1>yoga hiking</h1>
+                    <a href="" title="Yoga hiking" class="BlockLink">&nbsp;</a>
                 </div>
                 <div id="Facebook">
-                    be our friend!
+                    <a href="https://www.facebook.com/Activelifestyletherapy" title="Like us on Facebook" class="BlockLink">&nbsp;</a>
+                    <div class="fb-like" data-href="https://www.facebook.com/Activelifestyletherapy" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
                 </div>
                 <div id="FreeGift">
                     <h1>A Gift for You</h1>
@@ -45,10 +59,12 @@
             </div>
             <div id="HomeRow2" class="clearfix">
                 <div id="Wellness">
-                    <h1>wellness<br><span>coaching</span></h1>
+                    <h1>wellness coaching</h1>
+                    <a href="" title="Wellness coaching" class="BlockLink">&nbsp;</a>
                 </div>
                 <div id="BodyWork">
-                    <h1>bodywork<br><span>therapy</span></h1>
+                    <h1>bodywork therapy</h1>
+                    <a href="" title="Bodywork therapy" class="BlockLink">&nbsp;</a>
                 </div>
             </div>
             <div id="HomeRow3" class="clearfix">
