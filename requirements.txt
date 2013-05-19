@@ -3,3 +3,4 @@ lyrical_page==2.0.0p3
 django-grappelli==2.4.4
 South==0.7.6
 MySQL-python
+uwsgi
