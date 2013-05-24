@@ -11,6 +11,8 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^grappelli/', include('grappelli.urls')),
+    url(r'^subscribe/$', 'alt_pages.views.list_subscribe',
+        name='mailchimp_subscribe')
 )
 
 if settings.DEBUG:

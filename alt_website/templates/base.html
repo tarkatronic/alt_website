@@ -1,7 +1,8 @@
+{% load url from future %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Active Lifestyle Therapy</title>
+        <title>{% block page_title %}{% if sitepage.title %}{{ sitepage.title }} - {% endif %}Active Lifestyle Therapy{% endblock %}</title>
         <meta charset="utf8"/>
         <meta property="og:site_name" content="Active Lifestyle Therapy"/>
         <link href="http://fonts.googleapis.com/css?family=Comfortaa:400,300" rel="stylesheet" type="text/css">
@@ -25,7 +26,7 @@
             <div id="TopNav" class="clearfix">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="">About</a></li>
+                    <li><a href="/about/"{% if request.path == '/about/' %} class="Active"{% endif %}>About</a></li>
                     <li><a href="">Yoga Hiking</a></li>
                     <li><a href="">Wellness Coaching</a></li>
                     <li><a href="">Bodywork Therapy</a></li>
@@ -52,9 +53,23 @@
                     <h2>free hypno-meditation audio</h2>
                     <hr>
                     <span>Sit back and relax to this Hypno-Meditation geared to
-                    help turn procrastination into motivation ACTION. You'll
+                    help turn procrastination into motivated ACTION. You'll
                     also receive instant access to my ALT newsletter plus:</span>
                     <span class="pluses">updates | articles | resources | classes &amp; workshops</span>
+                    <form method="post" action="{% url 'mailchimp_subscribe' %}">
+                        {% csrf_token %}
+                        <div class="SubscribeFormField">
+                            <label>name<br>
+                                <input type="text" name="name">
+                            </label>
+                        </div>
+                        <div class="SubscribeFormField">
+                            <label>email<br>
+                                <input type="text" name="email">
+                            </label>
+                        </div>
+                        <button type="submit" class="Subscribe">send me my free gift!</button>
+                    </form>
                 </div>
             </div>
             <div id="HomeRow2" class="clearfix">
@@ -69,9 +84,10 @@
             </div>
             <div id="HomeRow3" class="clearfix">
                 <div id="Testimonial">
-                    <span class="Quote">"Last week's yoga hike with Jezy was fun and relaxing; it
-                    really helped me to pause and refocus on what is important in my life."<br></span>
-                    <span class="Signature">-Steve H, Arizona</span>
+                    <span class="Quote">"My first experience with yoga-hiking was outstanding. It was a good cardio workout, I felt the hike in my legs as we were going;
+                    however, with the yoga built in, I didn't feel sore the next morning when I awoke. Learning to take my yoga practice off the mat and out into Mother Nature was
+                    a wonderful experience."<br></span>
+                    <span class="Signature">-Julia S, Arizona</span>
                 </div>
                 <div id="Adventure">
                     <h1>Roadtrip Adventure!</h1>
