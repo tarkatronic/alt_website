@@ -51,7 +51,7 @@ h2.Tagline {font-size:1.8em;text-shadow:0 2px 8px #000;margin:15px 0;}
 #YogaHike {width:529px;height:400px;background:#000 url(../img/yoga_hiking.png) no-repeat;float:left;position:relative;}
 #YogaHike h1 {font-size:70pt;font-weight:100;position:relative;left:-9999px;}
 
-#Facebook {position:relative;width:75px;padding:13px 0 0 334px;height:70px;margin-left:10px;background:#eaeaea url(../img/be_our_friend_graphic.png) no-repeat 20px 15px;float:left;}
+#Facebook {position:relative;width:75px;padding:13px 0 0 334px;height:70px;margin-left:10px;background:rgba(255,255,255,0.9) url(../img/be_our_friend_graphic.png) no-repeat 20px 15px;float:left;}
 #Facebook .BlockLink {width:324px;}
 
 #FreeGift {width:375px;height:267px;margin:10px 0 0 10px;padding:20px 17px;background:#fff url(../img/girl_circle_graphic.png) no-repeat 265px -32px;color:#979797;float:left;}
