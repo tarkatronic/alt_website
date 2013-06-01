@@ -1,0 +1,88 @@
+{% load url from future %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf8"/>
+        <meta property="og:site_name" content="Active Lifestyle Therapy"/>
+        <link href="http://fonts.googleapis.com/css?family=Comfortaa:400,300" rel="stylesheet" type="text/css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block page_title %}{% if sitepage.title %}{{ sitepage.title }} - {% endif %}Active Lifestyle Therapy{% endblock %}</title>
+        <meta name="description" content="{{ sitepage.meta_description }}">
+        <meta name="keywords" content="{{ sitepage.meta_keywords }}">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="{{ STATIC_URL }}site_content/css/normalize.css">
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
+        <script src="{{ STATIC_URL }}site_content/js/vendor/modernizr-2.6.2.min.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+          ga('create', 'UA-41178916-1', 'activelifestyletherapy.com');
+          ga('send', 'pageview');
+        
+        </script>
+        {% block script-top-block %}{% endblock script-top-block %}
+        {% block script-top-extra-block %}{% endblock script-top-extra-block %}
+    </head>
+    <body class="{% block body-class-block %}{{ sitepage.page_class }}{% endblock body-class-block %}">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    {% block wrapper-block %}
+        <div id="BodyContainer">
+        {% block content-wrapper-block %}
+        {% block header-block %}
+            <div id="Header">
+                <div id="Logo">
+                    <h1>Active Lifestyle Therapy</h1>
+                </div>
+            </div>
+            <div id="TopNav" class="clearfix">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/"{% if request.path == '/about/' %} class="Active"{% endif %}>About</a></li>
+                    <li><a href="/yoga_hiking/"{% if request.path == '/yoga_hiking//' %} class="Active"{% endif %}>Yoga Hiking</a></li>
+                    <li><a href="/wellness_coaching/"{% if request.path == '/wellness_coaching/' %} class="Active"{% endif %}>Wellness Coaching</a></li>
+                    <li><a href="/bodywork_therapy/"{% if request.path == '/bodywork_therapy/' %} class="Active"{% endif %}>Bodywork Therapy</a></li>
+                    <li><a href="/calendar/"{% if request.path == '/calendar/' %} class="Active"{% endif %}>Calendar</a></li>
+                    <li><a href="/shop/"{% if request.path == '/shop/' %} class="Active"{% endif %}>Shop</a></li>
+                    <li><a href="/friends/"{% if request.path == '/friends/' %} class="Active"{% endif %}>Friends</a></li>
+                    <li><a href="/blog/"{% if request.path == '/blog/' %} class="Active"{% endif %}>Blog</a></li>
+                    <li class="last"><a href="/contact/"{% if request.path == '/contact/' %} class="Active"{% endif %}>Contact</a></li>
+                </ul>
+            </div>
+        {% block global-nav-block %}{% endblock global-nav-block %}
+        {% endblock header-block %}
+        {% block content-block %}
+            <div class="content-block">
+                {% block content-header-block %}
+                    <div class="content-header-block"><h1>{{ sitepage.content_header }}</h1></div>
+                {% endblock content-header-block %}
+                <div class="content">{{ sitepage.content|safe }}</div>
+            </div>
+        {% endblock content-block %}
+        {% block footer-block %}
+        <footer><small>&copy; {% now "Y" %}, Active Lifestyle Therapy, LLC</small></footer>
+        {% endblock footer-block %}
+        {% endblock content-wrapper-block %}
+        </div>
+    {% endblock wrapper-block %}
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}site_content/js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="{{ STATIC_URL }}js/plugins.js"></script>
+        <script src="{{ STATIC_URL }}js/main.js"></script>
+        {% block script-bot-block %}{% endblock script-bot-block %}
+        {% block script-bot-extra-block %}{% endblock script-bot-extra-block %}
+    </body>
+</html>
