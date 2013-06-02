@@ -40,7 +40,7 @@ button {
     *zoom: 1;
 }
 
-#BodyContainer {background:#444444;color:#fff;width:948px;padding:29px;margin:30px auto;border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;box-shadow:0 0 20px 6px #000;}
+#BodyContainer {background:rgba(068,068,068,0.65);color:#fff;width:948px;padding:29px;margin:30px auto;border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;box-shadow:0 0 20px 6px #000;}
 #Header {width:100%;height:298px;background:#000 url(../img/be_active_banner.png) no-repeat;position:relative;}
 #Logo {position:absolute;top:70px;left:420px;background:transparent url(../img/active_lifestyle_therapy_graphic.png) no-repeat left top;width:371px;height:177px;}
 #Logo h1 {font:normal 16pt 'Comfortaa';color:#eb8b52;position:relative;left:-9999px}
