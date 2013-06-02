@@ -75,6 +75,9 @@ h2.Tagline {font-size:1.8em;text-shadow:0 2px 8px #000;margin:15px 0;}
 	top:5px;
 }
 
+.content-header-block h1 {font-size:3.9em;}
+.content {background:rgba(255,255,255,0.9);color:#979797;}
+
 #ContentFooter {margin-top:10px;background:rgba(255,255,255,0.9) url(../img/girl_circle_graphic.png) no-repeat right -60px;height:100px;padding:15px;}
 #FacebookFooter {height:100%;position:relative;float:left;width:75px;padding:13px 0 0 104px;height:70px;}
 #FacebookFooter .BlockLink {width:75px;}
