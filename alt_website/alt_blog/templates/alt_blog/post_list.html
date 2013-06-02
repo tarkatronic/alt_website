@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block script-top-block %}<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}alt_blog/css/alt_blog.css">{% endblock script-top-block %}
+
+{% block content-block %}
+    <div class="content-header-block"><h1>blog</h1></div>
+    {% for post in object_list %}
+        <div class="BlogListItem">
+            <h2>{{ post.title }}<span class="PostTime">{{ post.time_posted|date:"F jS, Y" }}</span></h2>
+            {% if forloop.first %}
+            <div class="BlogContent">
+                {{ post.content|safe }}
+            </div>
+            {% endif %}
+        </div>
+    {% empty %}
+        <div class="content">No blog posts yet!</div>
+    {% endfor %}
+{% endblock content-block %}
