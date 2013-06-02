@@ -1,5 +1,6 @@
 import datetime
 
+from django.core.urlresolvers import reverse
 from django.db import models
 
 
@@ -29,3 +30,8 @@ class Post(models.Model):
 
     def __unicode__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('alt_blog:view_post', args=[self.time_posted.year,
+                                                   self.time_posted.month,
+                                                   self.slug])

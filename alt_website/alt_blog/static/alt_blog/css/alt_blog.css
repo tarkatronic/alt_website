@@ -1,5 +1,7 @@
 .BlogListItem {background:#fff;color:#6c6c6c;}
 .BlogListItem h2 {padding:10px 80px;font-size:1.3em;}
+.BlogListItem h2 a {color:#6c6c6c;}
+.BlogListItem h2 a:hover {text-decoration:underline;}
 .PostTime {float:right;}
 
 .BlogListItem .BlogContent {padding:10px 80px;}
