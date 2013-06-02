@@ -52,7 +52,7 @@ button {
 #TopNav a {display:block;padding:0 8px;color:#7d7d7d;text-decoration:none;}
 #TopNav a:hover, #TopNav a.Active {color:#e7773a;}
 
-h1,h2 {font-family:'Comfortaa';font-weight:normal;margin:0;padding:0;}
+h1,h2,h3 {font-family:'Comfortaa';font-weight:normal;margin:0;padding:0;}
 h1.Proactive {font-size:8.8em;letter-spacing:-5px;text-shadow:0 4px 8px #111;padding:0 2px;}
 h2.Tagline {font-size:1.8em;text-shadow:0 2px 8px #000;margin:15px 0;}
 
@@ -75,7 +75,7 @@ h2.Tagline {font-size:1.8em;text-shadow:0 2px 8px #000;margin:15px 0;}
 	top:5px;
 }
 
-.content-header-block h1 {font-size:3.9em;}
+.content-header-block h1 {font-size:3.9em;text-align:center;margin-bottom:10px;}
 .content {background:rgba(255,255,255,0.9);color:#858585;padding:15px;}
 
 #ContentFooter {margin-top:10px;background:rgba(255,255,255,0.9) url(../img/girl_circle_graphic.png) no-repeat right -60px;height:100px;padding:15px;}
