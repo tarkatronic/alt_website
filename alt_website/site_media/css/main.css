@@ -1,6 +1,16 @@
 html, body {margin:0;padding:0;}
 body {background:#989898 url(../img/yucca_background.jpg);font:normal 12pt serif;}
 img {border:none;}
+a {text-decoration:none;}
+button {
+    position:relative;
+    font:normal 0.9em 'Comfortaa';
+    color:#ececec;
+    padding:10px 0;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ef8f56), color-stop(1, #e1502a));
+    border:none;
+    box-shadow:1px 1px 3px 1px #ccc;
+}
 
 /* Clearfix styles */
 /**
@@ -55,27 +65,28 @@ h2.Tagline {font-size:1.8em;text-shadow:0 2px 8px #000;margin:15px 0;}
 #Facebook .BlockLink {width:324px;}
 
 #FreeGift {width:375px;height:267px;margin:10px 0 0 10px;padding:20px 17px;background:#fff url(../img/girl_circle_graphic.png) no-repeat 265px -32px;color:#979797;float:left;}
-#FreeGift h1 {font-size:2.3em;color:#eb8b52;}
-#FreeGift h2 {font-size:1.1em;color:#acacac;}
+#FreeGift h1, #FreeGiftFooter h1 {font-size:2.3em;color:#eb8b52;}
+#FreeGift h2, #FreeGiftFooter h2 {font-size:1.1em;color:#acacac;}
 #FreeGift hr {width:250px;margin:10px 0 22px 0;border:0;height:1px;background-color:#acacac;}
 #FreeGift .pluses {display:block;font-family:'Comfortaa';font-weight:normal;font-size:0.9em;color:#eb8b52;}
-
-#FreeGift form {margin-top:15px;}
-#FreeGift form label {font:normal 1em 'Comfortaa';}
-.SubscribeFormField {float:left;width:175px; margin-left:10px;}
-.SubscribeFormField input {width:175px;margin-left:-10px;line-height:1.6em;height:1.6em;background:#fafafa;border:1px solid #979797;font:normal 0.9em 'Comfortaa';}
-#FreeGift form button {
+#FreeGift button {
 	display:block;
 	width:366px;
-	position:relative;
 	top:5px;
-	font:normal 0.9em 'Comfortaa';
-	color:#ececec;
-	padding:10px 0;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ef8f56), color-stop(1, #e1502a));
-	border:none;
-	box-shadow:1px 1px 3px 1px #ccc;
 }
+
+#ContentFooter {background:rgba(255,255,255,0.9) url(../img/girl_circle_graphic.png) no-repeat right -60px;height:100px;padding:15px;}
+#FacebookFooter {height:100%;position:relative;float:left;width:75px;padding:13px 0 0 104px;height:70px;}
+#FacebookFooter .BlockLink {width:75px;}
+#FreeGiftFooter {height:100%;float:right;color:#979797;}
+#FreeGiftFooter .Headers {float:left;margin-top:10px;}
+#FreeGiftFooter form {float:left;margin:0 40px 0 20px;}
+#FreeGiftFooter button {width:363px;margin-top:5px;}
+
+#FreeGift form {margin-top:15px;}
+#FreeGift form label, #FreeGiftFooter form label {font:normal 1em 'Comfortaa';}
+.SubscribeFormField {float:left;width:175px; margin-left:10px;}
+.SubscribeFormField input {width:175px;margin-left:-10px;line-height:1.6em;height:1.6em;background:#fafafa;border:1px solid #979797;font:normal 0.9em 'Comfortaa';}
 
 #Wellness {position:relative;margin-top:10px;width:380px;height:230px;background:#000 url(../img/wellness_coaching.png) no-repeat;color:#fff;float:left;text-align:right;}
 #Wellness h1 {font-size:70pt;position:relative;left:-9999px;}
@@ -94,4 +105,4 @@ h2.Tagline {font-size:1.8em;text-shadow:0 2px 8px #000;margin:15px 0;}
 #Adventure span {color:#6d6d6d;}
 #Adventure a {color:#eb8b52;text-decoration:none;font:normal 12pt 'Comfortaa';}
 
-#Footer {border-top:1px solid #fff;font-size:14pt;margin-top:20px;padding-top:10px;}
+footer, #Footer {border-top:1px solid #fff;font-size:14pt;margin-top:20px;padding-top:10px;}
