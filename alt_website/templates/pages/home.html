@@ -1,2 +1,64 @@
 {% extends "base.html" %}
 
+{% load url from future %}
+        {% block content-block %}
+            <h1 class="Proactive">be proACTIVE.</h1>
+            <h2 class="Tagline">training, therapy and events to help you reconnect with your body</h2>
+            <div id="HomeRow1">
+                <div id="YogaHike" class="clearfix">
+                    <h1>yoga hiking</h1>
+                    <a href="" title="Yoga hiking" class="BlockLink">&nbsp;</a>
+                </div>
+                <div id="Facebook">
+                    <a href="https://www.facebook.com/Activelifestyletherapy" title="Like us on Facebook" class="BlockLink" target="_blank">&nbsp;</a>
+                    <div class="fb-like" data-href="https://www.facebook.com/Activelifestyletherapy" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+                </div>
+                <div id="FreeGift">
+                    <h1>A Gift for You</h1>
+                    <h2>free hypno-meditation audio</h2>
+                    <hr>
+                    <span>Sit back and relax to this Hypno-Meditation geared to
+                    help turn procrastination into motivated ACTION. You'll
+                    also receive instant access to my ALT newsletter plus:</span>
+                    <span class="pluses">updates | articles | resources | classes &amp; workshops</span>
+                    <form method="post" action="{% url 'mailchimp_subscribe' %}">
+                        {% csrf_token %}
+                        <div class="SubscribeFormField">
+                            <label>name<br>
+                                <input type="text" name="name">
+                            </label>
+                        </div>
+                        <div class="SubscribeFormField">
+                            <label>email<br>
+                                <input type="text" name="email">
+                            </label>
+                        </div>
+                        <button type="submit" class="Subscribe">send me my free gift!</button>
+                    </form>
+                </div>
+            </div>
+            <div id="HomeRow2" class="clearfix">
+                <div id="Wellness">
+                    <h1>wellness coaching</h1>
+                    <a href="" title="Wellness coaching" class="BlockLink">&nbsp;</a>
+                </div>
+                <div id="BodyWork">
+                    <h1>bodywork therapy</h1>
+                    <a href="" title="Bodywork therapy" class="BlockLink">&nbsp;</a>
+                </div>
+            </div>
+            <div id="HomeRow3" class="clearfix">
+                <div id="Testimonial">
+                    <span class="Quote">"My first experience with yoga-hiking was outstanding. It was a good cardio workout, I felt the hike in my legs as we were going;
+                    however, with the yoga built in, I didn't feel sore the next morning when I awoke. Learning to take my yoga practice off the mat and out into Mother Nature was
+                    a wonderful experience."<br></span>
+                    <span class="Signature">-Julia S, Arizona</span>
+                </div>
+                <div id="Adventure">
+                    <h1>Roadtrip Adventure!</h1>
+                    <h2>February 1st, 2013</h2>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit...<br></span>
+                    <a href="">read more &gt;</a>
+                </div>
+            </div>
+        {% endblock %}
