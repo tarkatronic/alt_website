@@ -6,3 +6,4 @@ local_settings.py
 .DS_Store
 .*project
 *.db
+.settings/
