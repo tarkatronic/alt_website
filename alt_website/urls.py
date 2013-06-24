@@ -13,8 +13,10 @@ urlpatterns = patterns('',
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^subscribe/$', 'alt_pages.views.list_subscribe',
         name='mailchimp_subscribe'),
-   url(r'^blog/', include('alt_blog.urls', namespace='alt_blog',
-                          app_name='blog')),
+    url(r'^download/(?P<file_id>\d+)/$', 'alt_pages.views.download',
+        name='download_file'),
+    url(r'^blog/', include('alt_blog.urls', namespace='alt_blog',
+                           app_name='blog')),
 )
 
 if settings.DEBUG:
