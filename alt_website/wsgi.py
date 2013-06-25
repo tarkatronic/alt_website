@@ -10,7 +10,7 @@ sys.path.append(os.path.join(PROJECT_DIR, PROJECT_MODULE_NAME, 'alt_website'))
 # if running multiple sites in the same mod_wsgi process. To fix this, use
 # mod_wsgi daemon mode with each site in its own daemon process, or use
 # os.environ["DJANGO_SETTINGS_MODULE"] = "alt_website.settings"
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "alt_website.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "alt_website.settings.base")
 
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION

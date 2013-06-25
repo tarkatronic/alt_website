@@ -1,3 +1,4 @@
+import os
 import os.path
 
 
@@ -17,7 +18,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'alt_web',
         'USER': 'alt_web',
-        'PASSWORD': 'alt_web_db_pass',
+        'PASSWORD': os.environ['DJANGO_DATABASE_PASSWORD'],
         'HOST': 'localhost',
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': 'alt_web.db'
@@ -70,7 +71,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '@_qt3^uibyzelecza4zw3h-klfe2el88x+)&7(rxu+0=o^$*1*'
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -153,12 +154,5 @@ LOGGING = {
 }
 
 
-MAILCHIMP_API_KEY = 'a7b69853c236b3831b63789fd0bc7712-us4'
-MAILCHIMP_LIST_ID = '8e25bba5b7'
-
-
-try:
-    from local_settings import *
-except:
-    pass
-
+MAILCHIMP_API_KEY = os.environ['MAILCHIMP_API_KEY']
+MAILCHIMP_LIST_ID = os.environ['MAILCHIMP_LIST_ID']
