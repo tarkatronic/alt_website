@@ -58,8 +58,8 @@ h2.Tagline {font-size:1.8em;text-shadow:0 2px 8px #000;margin:15px 0;}
 
 .BlockLink {position:absolute;display:block;top:0;left:0;width:100%;height:100%;}
 
-#YogaHike {width:529px;height:400px;background:#000 url(../img/yoga_hiking.png) no-repeat;float:left;position:relative;}
-#YogaHike h1 {font-size:70pt;font-weight:100;position:relative;left:-9999px;}
+#YogaHike {width:529px;height:400px;background:#000 url(../img/yoga_hiking.jpg) no-repeat;float:left;position:relative;}
+#YogaHike h1 {font-size:5.5em;font-weight:lighter;padding-left:18px;}
 
 #Facebook {position:relative;width:75px;padding:13px 0 0 334px;height:70px;margin-left:10px;background:rgba(255,255,255,0.9) url(../img/be_our_friend_graphic.png) no-repeat 20px 15px;float:left;}
 #Facebook .BlockLink {width:324px;}
@@ -94,9 +94,9 @@ h2.Tagline {font-size:1.8em;text-shadow:0 2px 8px #000;margin:15px 0;}
 #Wellness {position:relative;margin-top:10px;width:380px;height:230px;background:#000 url(../img/wellness_coaching.png) no-repeat;color:#fff;float:left;text-align:right;}
 #Wellness h1 {font-size:70pt;position:relative;left:-9999px;}
 #Wellness h1 span {font-size:36pt;position:relative;top:-60px;}
-#BodyWork {position:relative;margin:10px 0 0 10px;width:558px;height:230px;background:#000 url(../img/body_work_therapy.png) no-repeat;color:#fff;float:left;}
-#BodyWork h1 {font-size:36pt;position:relative;left:-9999px;}
-#BodyWork h1 span {font-size:70pt;position:relative;top:-20px;}
+#BodyWork {position:relative;margin:10px 0 0 10px;width:558px;height:230px;background:#000 url(../img/body_work_therapy-2.jpg) no-repeat;color:#fff;float:left;}
+#BodyWork h1 {font-size:2.5em;font-weight:lighter;padding:15px 0 0 36px;}
+#BodyWork h1 span {font-size:2em;font-weight:normal;position:relative;top:-10px;}
 
 #Testimonial {width:488px;background:#fff;color:#6d6d6d;margin-top:10px;float:left;padding:45px 15px 45px 25px;line-height:1.6em;}
 #Testimonial .Quote {font-style:italic;}
