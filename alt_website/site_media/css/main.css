@@ -108,4 +108,13 @@ h2.Tagline {font-size:1.8em;text-shadow:0 2px 8px #000;margin:15px 0;}
 #Adventure span {color:#6d6d6d;}
 #Adventure a {color:#eb8b52;text-decoration:none;font:normal 12pt 'Comfortaa';}
 
+#contact_form input, #contact_form textarea {width:500px;}
+#contact_form th {text-align:right;vertical-align:top;}
+#contact_form td {padding-bottom:4px;}
+#contact_form button {padding:8px 12px;}
+#google_map {height:400px;width:550px;float:right;margin:5px 0 5px 5px;}
+
 footer, #Footer {border-top:1px solid #fff;font-size:14pt;margin-top:20px;padding-top:10px;}
+
+.errorlist {margin:2px;list-style-type:none;padding:0;color:#b94a48;background-color:#f2dede;border:1px solid #eed3d7;}
+.errorlist li {padding:2px 6px;}

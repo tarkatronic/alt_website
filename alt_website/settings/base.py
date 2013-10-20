@@ -11,7 +11,9 @@ ADMINS = (
     ('Joey Wilhelm', 'joey.wilhelm@gmail.com'),
 )
 
-MANAGERS = ADMINS
+MANAGERS = (
+    ('Jezaree Mcnutt', 'jezaree@activelifestyletherapy.com'),
+)
 
 DATABASES = {
     'default': {

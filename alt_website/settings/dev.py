@@ -1,5 +1,7 @@
 from .base import *
 
+MANAGERS = ADMINS
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 TEMPLATE_DEBUG = DEBUG = True
 

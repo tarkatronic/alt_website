@@ -3,14 +3,16 @@ import os
 
 from django.conf import settings
 from django.contrib import messages
+from django.core.mail import mail_managers
 from django.core.servers.basehttp import FileWrapper
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
 from django.views.decorators.http import require_POST
 from mailchimp import utils
+from site_content.models import SitePage
 
-from alt_pages.forms import MailChimpForm
+from alt_pages.forms import ContactForm, MailChimpForm
 from alt_pages.models import DownloadFile, DownloadLog
 
 
@@ -59,3 +61,25 @@ def download(request, file_id):
                                        os.path.split(dl.file.name)[1])
     response['Content-Length'] = os.path.getsize(dl.file.path)
     return response
+
+
+def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            message = ('Name: %s\nEmail: %s\nPhone: %s\nComments: %s' %
+                       (form.data.get('name', ''),
+                        form.data.get('email', ''),
+                        form.data.get('phone', ''),
+                        form.data.get('comments', '')))
+            mail_managers('New Contact from ALT Website', message)
+            messages.success(request, 'Thank you for your comments!')
+            form = ContactForm()
+    else:
+        form = ContactForm()
+    try:
+        sitepage = SitePage.objects.get(url='/contact/')
+    except SitePage.DoesNotExist:
+        sitepage = None
+    return render(request, 'pages/contact.html', {'form': form,
+                                                  'sitepage': sitepage})
