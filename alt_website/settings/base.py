@@ -42,7 +42,7 @@ MEDIA_ROOT = '%s/media' % PROJECT_PATH
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -124,9 +124,11 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'alt_pages',
     'alt_blog',
+    'filebrowser',
     'mailchimp',
     'site_content',
-    'south'
+    'south',
+    'tinymce',
 )
 
 LOGGING = {
