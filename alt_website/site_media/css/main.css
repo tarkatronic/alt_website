@@ -79,8 +79,8 @@ h2.Tagline {font-size:1.8em;text-shadow:0 2px 8px #000;margin:15px 0;}
 .content {background:rgba(255,255,255,0.9);color:#858585;padding:15px;}
 
 #ContentFooter {margin-top:10px;background:rgba(255,255,255,0.9) url(../img/girl_circle_graphic.png) no-repeat right -60px;height:100px;padding:15px;}
-#FacebookFooter {height:100%;position:relative;float:left;width:75px;padding:13px 0 0 104px;height:70px;}
-#FacebookFooter .BlockLink {width:75px;}
+#FacebookFooter {height:100%;position:relative;float:left;width:75px;padding:40px 0 0 104px;height:70px;background:url(../img/be_our_friend.png) no-repeat center top;}
+#FacebookFooter .BlockLink {width:75px;padding:40px 0 0 40px;}
 #FreeGiftFooter {height:100%;float:right;color:#979797;}
 #FreeGiftFooter .Headers {float:left;margin-top:10px;}
 #FreeGiftFooter form {float:left;margin:0 40px 0 20px;}
