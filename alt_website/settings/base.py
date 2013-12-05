@@ -20,7 +20,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'alt_web',
         'USER': 'alt_web',
-        'PASSWORD': os.environ['DJANGO_DATABASE_PASSWORD'],
+        'PASSWORD': os.environ.get('DJANGO_DATABASE_PASSWORD', ''),
         'HOST': 'localhost',
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': 'alt_web.db'
@@ -73,7 +73,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '')
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -158,5 +158,5 @@ LOGGING = {
 }
 
 
-MAILCHIMP_API_KEY = os.environ['MAILCHIMP_API_KEY']
-MAILCHIMP_LIST_ID = os.environ['MAILCHIMP_LIST_ID']
+MAILCHIMP_API_KEY = os.environ.get('MAILCHIMP_API_KEY', '')
+MAILCHIMP_LIST_ID = os.environ.get('MAILCHIMP_LIST_ID', '')
