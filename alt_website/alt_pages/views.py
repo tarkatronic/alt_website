@@ -65,7 +65,7 @@ def download(request, file_id):
 
 def contact(request):
     if request.method == 'POST':
-        form = ContactForm(request.POST)
+        form = ContactForm(request.POST, request=request)
         if form.is_valid():
             message = ('Name: %s\nEmail: %s\nPhone: %s\nComments: %s' %
                        (form.data.get('name', ''),

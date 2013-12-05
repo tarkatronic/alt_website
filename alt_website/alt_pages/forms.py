@@ -1,3 +1,4 @@
+from botscout.forms import BotScoutForm
 from django import forms
 from django.contrib.localflavor.us import forms as us_forms
 from django.utils.translation import ugettext_lazy as _
@@ -8,7 +9,7 @@ class MailChimpForm(forms.Form):
     email = forms.EmailField(label=_('email'), max_length=255, required=True)
 
 
-class ContactForm(forms.Form):
+class ContactForm(BotScoutForm, forms.Form):
     name = forms.CharField(label=_('Name'), max_length=255, required=True)
     email = forms.EmailField(label=_('Email'), max_length=255, required=False)
     phone = us_forms.USPhoneNumberField(label=_('Phone #'), required=False)
@@ -21,3 +22,4 @@ class ContactForm(forms.Form):
         if not any([email, phone]):
             raise forms.ValidationError('You must provide either an email '
                                         'address or phone number.')
+        return super(ContactForm, self).clean()
