@@ -57,10 +57,10 @@
                     <li><a href="/yoga_hiking/"{% if request.path == '/yoga_hiking/' %} class="Active"{% endif %}>Yoga Hiking</a></li>
                     <li><a href="/wellness_coaching/"{% if request.path == '/wellness_coaching/' %} class="Active"{% endif %}>Wellness Coaching</a></li>
                     <li><a href="/bodywork_therapy/"{% if request.path == '/bodywork_therapy/' %} class="Active"{% endif %}>Bodywork Therapy</a></li>
-                    <li><a href="/calendar/"{% if request.path == '/calendar/' %} class="Active"{% endif %}>Calendar</a></li>
-                    <li><a href="/shop/"{% if request.path == '/shop/' %} class="Active"{% endif %}>Shop</a></li>
-                    <li><a href="/friends/"{% if request.path == '/friends/' %} class="Active"{% endif %}>Friends</a></li>
-                    <li><a href="/blog/"{% if request.path|slice:":6" == '/blog/' %} class="Active"{% endif %}>Blog</a></li>
+                    {# <li><a href="/calendar/"{% if request.path == '/calendar/' %} class="Active"{% endif %}>Calendar</a></li> #}
+                    {# <li><a href="/shop/"{% if request.path == '/shop/' %} class="Active"{% endif %}>Shop</a></li> #}
+                    {# <li><a href="/friends/"{% if request.path == '/friends/' %} class="Active"{% endif %}>Friends</a></li> #}
+                    {# <li><a href="/blog/"{% if request.path|slice:":6" == '/blog/' %} class="Active"{% endif %}>Blog</a></li> #}
                     <li class="last"><a href="/contact/"{% if request.path == '/contact/' %} class="Active"{% endif %}>Contact</a></li>
                 </ul>
             </div>
