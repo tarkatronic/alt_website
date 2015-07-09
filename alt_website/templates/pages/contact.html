@@ -32,7 +32,7 @@
         <script type="text/javascript">
         $(function(){
             var m = $('#google_map').google_map();
-            m.google_map('geocode', '5025 S. Ash Ave, Tempe, AZ 85282',
+            m.google_map('geocode', '4653 S Lakeshore Dr #1, Tempe, AZ 85282',
                 function(result, status){
                     if(status==google.maps.GeocoderStatus.OK){
                         m.google_map('center',result[0].geometry.location,15);
